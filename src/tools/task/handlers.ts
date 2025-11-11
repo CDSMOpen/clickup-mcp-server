@@ -557,8 +557,8 @@ export async function createTaskHandler(params) {
     description,
     markdown_description,
     status,
-    dueDate,
-    startDate,
+    due_date,
+    start_date,
     parent,
     tags,
     custom_fields,
@@ -571,7 +571,7 @@ export async function createTaskHandler(params) {
   // Use our helper function to validate and convert priority
   const priority = toTaskPriority(params.priority);
 
-  const listId = await getListId(params.listId, params.listName);
+  const listId = await getListId(params.list_id, params.list_name);
 
   // Resolve assignees if provided
   let resolvedAssignees = undefined;
@@ -607,14 +607,14 @@ export async function createTaskHandler(params) {
   }
 
   // Add due date if specified
-  if (dueDate) {
-    taskData.due_date = parseDueDate(dueDate);
+  if (due_date) {
+    taskData.due_date = parseDueDate(due_date);
     taskData.due_date_time = true;
   }
 
   // Add start date if specified
-  if (startDate) {
-    taskData.start_date = parseDueDate(startDate);
+  if (start_date) {
+    taskData.start_date = parseDueDate(start_date);
     taskData.start_date_time = true;
   }
 

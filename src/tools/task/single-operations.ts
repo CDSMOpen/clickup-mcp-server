@@ -73,7 +73,7 @@ const handleOperationError = (operation: string, error: any) => {
  */
 export const createTaskTool = {
   name: "create_task",
-  description: `Creates a single task in a ClickUp list. Use listId (preferred) or listName. Required: name + list info. For multiple tasks use create_bulk_tasks. Can create subtasks via parent param. Supports custom fields as array of {id, value}. Supports assignees as array of user IDs, emails, or usernames.`,
+  description: `Creates a single task in a ClickUp list. Use list_id (preferred) or list_name. Required: name + list info. For multiple tasks use create_bulk_tasks. Can create subtasks via parent param. Supports custom fields as array of {id, value}. Supports assignees as array of user IDs, emails, or usernames.`,
   inputSchema: {
     type: "object",
     properties: {
@@ -81,13 +81,13 @@ export const createTaskTool = {
         type: "string",
         description: "REQUIRED: Name of the task. Put a relevant emoji followed by a blank space before the name."
       },
-      listId: {
+      list_id: {
         type: "string",
-        description: "REQUIRED (unless listName provided): ID of the list to create the task in. If you have this ID from a previous response, use it directly rather than looking up by name."
+        description: "REQUIRED (unless list_name provided): ID of the list to create the task in. If you have this ID from a previous response, use it directly rather than looking up by name."
       },
-      listName: {
+      list_name: {
         type: "string",
-        description: "REQUIRED (unless listId provided): Name of the list to create the task in - will automatically find the list by name."
+        description: "REQUIRED (unless list_id provided): Name of the list to create the task in - will automatically find the list by name."
       },
       description: {
         type: "string",
@@ -105,11 +105,11 @@ export const createTaskTool = {
         type: "number",
         description: "Optional priority of the task (1-4), where 1 is urgent/highest priority and 4 is lowest priority. Only set this when explicitly requested."
       },
-      dueDate: {
+      due_date: {
         type: "string",
         description: "Optional due date. Supports Unix timestamps (ms) or natural language like '1 hour from now', 'tomorrow', 'next week', etc."
       },
-      startDate: {
+      start_date: {
         type: "string",
         description: "Optional start date. Supports Unix timestamps (ms) or natural language like 'now', 'start of today', etc."
       },
