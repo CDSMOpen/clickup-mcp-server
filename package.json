@@ -48,12 +48,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taazkareem/clickup-mcp-server.git"
+    "url": "git+https://github.com/CDSMOpen/clickup-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/taazkareem/clickup-mcp-server/issues"
+    "url": "https://github.com/CDSMOpen/clickup-mcp-server/issues"
   },
-  "homepage": "https://github.com/taazkareem/clickup-mcp-server#readme",
+  "homepage": "https://github.com/CDSMOpen/clickup-mcp-server#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.3",
     "axios": "^1.6.7",

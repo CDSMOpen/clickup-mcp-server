@@ -318,25 +318,25 @@ export const duplicateTaskTool = {
  */
 export const getTaskTool = {
   name: "get_task",
-  description: `Gets task details by taskId (automatically handles both regular and custom IDs) or taskName. For taskName search, provide listName for faster lookup. Set subtasks=true to include all subtask details.`,
+  description: `Gets task details by task_id (automatically handles both regular and custom IDs) or task_name. For task_name search, provide list_name for faster lookup. Set subtasks=true to include all subtask details.`,
   inputSchema: {
     type: "object",
     properties: {
-      taskId: {
+      task_id: {
         type: "string",
         description: "ID of task to retrieve (preferred). Automatically detects and handles both regular task IDs (9 characters) and custom IDs (like 'DEV-1234', 'PROJ-456'). Simply provide any task ID format here."
       },
-      taskName: {
+      task_name: {
         type: "string",
-        description: "Name of task to retrieve. Can be used alone for a global search, or with listName for faster lookup."
+        description: "Name of task to retrieve. Can be used alone for a global search, or with list_name for faster lookup."
       },
-      listName: {
+      list_name: {
         type: "string",
-        description: "Name of list containing the task. Optional but recommended when using taskName."
+        description: "Name of list containing the task. Optional but recommended when using task_name."
       },
-      customTaskId: {
+      custom_task_id: {
         type: "string",
-        description: "Custom task ID (e.g., 'DEV-1234'). This parameter is now optional since taskId automatically handles custom IDs. Use only for explicit custom ID lookup or backward compatibility."
+        description: "Custom task ID (e.g., 'DEV-1234'). This parameter is now optional since task_id automatically handles custom IDs. Use only for explicit custom ID lookup or backward compatibility."
       },
       subtasks: {
         type: "boolean",

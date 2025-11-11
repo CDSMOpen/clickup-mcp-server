@@ -455,10 +455,10 @@ function findTaskByName(tasks, name) {
 export async function getTaskHandler(params) {
   try {
     const result = await findTask({
-      taskId: params.taskId,
-      taskName: params.taskName,
-      listName: params.listName,
-      customTaskId: params.customTaskId,
+      taskId: params.task_id,
+      taskName: params.task_name,
+      listName: params.list_name,
+      customTaskId: params.custom_task_id,
       includeSubtasks: params.subtasks
     });
 
